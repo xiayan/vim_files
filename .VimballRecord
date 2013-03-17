@@ -1,2 +1,3 @@
 supertab.vba: call delete('/Users/yanxia/.vim/doc/supertab.txt')|call delete('/Users/yanxia/.vim/plugin/supertab.vim')
 bandit.vba: call delete('/Users/yanxia/.vim/colors/bandit.vim')|call delete('/Users/yanxia/.vim/syntax/colours_bandit.vim')|call delete('/Users/yanxia/.vim/ftplugin/colours_bandit.vim')
+winmanager.vmb: call delete('/Users/yanxia/.vim/doc/winmanager.txt')|call delete('/Users/yanxia/.vim/plugin/winfileexplorer.vim')|call delete('/Users/yanxia/.vim/plugin/winmanager.vim')|call delete('/Users/yanxia/.vim/plugin/wintagexplorer.vim')
