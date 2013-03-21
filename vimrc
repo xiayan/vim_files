@@ -3,7 +3,6 @@ set laststatus=2
 set encoding=utf-8
 syntax enable
 
-"colorscheme Monokai-Refined
 if has("gui_running")
     colorscheme github
     set columns=82
