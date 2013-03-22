@@ -149,7 +149,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 "Powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-let Powerline_symbols = 'fancy'
+""let Powerline_symbols = 'fancy'
 
 "Ident_Guide
 let g:indent_guides_guide_size=1
