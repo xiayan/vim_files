@@ -4,17 +4,19 @@ set encoding=utf-8
 syntax enable
 
 if has("gui_running")
-    colorscheme github
+    "colorscheme github
+    colorscheme Tomorrow-Night-Eighties
     set columns=82
 else
     set t_Co=256
-    colorscheme github_console
+    "colorscheme github_console
+    colorscheme Tomorrow-Night-Eighties
 endif
 
 "set guifont=Monaco:h12
-"set guifont=Lucida\ Sans\ Typewriter:h13
-set guifont=Lucida\ Sans\ Typewriter\ Regular\ for\ Powerline:h13
-set scrolloff=1000
+"set guifont=Lucida\ Sans\ Typewriter\ Regular\ for\ Powerline:h13
+set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+"set scrolloff=1000
 "set clipboard=unnamed
 
 " Cursor setup
