@@ -16,6 +16,7 @@ endif
 "set guifont=Monaco:h12
 "set guifont=Lucida\ Sans\ Typewriter\ Regular\ for\ Powerline:h13
 set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+"set guifont=Source\ Code\ Pro\ Light\ for\ Powerline:h13
 "set scrolloff=1000
 "set clipboard=unnamed
 

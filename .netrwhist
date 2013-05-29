@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/yanxia/.vim'
-let g:netrw_dirhist_2='/Users/yanxia/Dropbox/tools'
-let g:netrw_dirhist_3='/Users/yanxia/.vim/bundle/vim-fugitive/doc'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='scp://lonestar/'
+let g:netrw_dirhist_2='scp://lonestar/.ssh/'
+let g:netrw_dirhist_3='scp://lonestar/'
+let g:netrw_dirhist_4='scp://lonestar/workd/'
+let g:netrw_dirhist_5='scp://lonestar/workd/scripts/'
