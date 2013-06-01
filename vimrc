@@ -18,7 +18,7 @@ endif
 set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 "set guifont=Source\ Code\ Pro\ Light\ for\ Powerline:h13
 "set scrolloff=1000
-"set clipboard=unnamed
+set clipboard=unnamed
 
 " Cursor setup
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -56,6 +56,7 @@ set cindent
 set ignorecase
 set smartcase
 set ruler
+set mouse=a
 set wildmenu
 set wildignore=*.o,*~,*.pyc,*.class
 
