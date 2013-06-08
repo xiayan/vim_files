@@ -11,6 +11,7 @@ let g:solarized_bold = 0
 let g:solarized_hitrail = 1
 call togglebg#map("<F6>")
 colorscheme solarized
+set linespace=-1
 
 if has("gui_running")
     set columns=88
