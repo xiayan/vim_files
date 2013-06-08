@@ -20,3 +20,6 @@
 [submodule "bundle/cscope"]
 	path = bundle/cscope
 	url = https://github.com/brookhong/cscope.vim.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
