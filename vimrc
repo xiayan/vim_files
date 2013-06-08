@@ -1,16 +1,19 @@
 set nocompatible
 set laststatus=2
 set encoding=utf-8
+
+call pathogen#infect()
+
 syntax enable
 
+set background=dark
+let g:solarized_bold = 0
+let g:solarized_hitrail = 1
+call togglebg#map("<F6>")
+colorscheme solarized
+
 if has("gui_running")
-    "colorscheme github
-    colorscheme Tomorrow-Night-Eighties
-    set columns=82
-else
-    set t_Co=256
-    "colorscheme github_console
-    colorscheme Tomorrow-Night-Eighties
+    set columns=88
 endif
 
 "set guifont=Monaco:h12
@@ -76,7 +79,6 @@ au BufNewFile,BufRead *.cl set filetype=cool
 au BufNewFile,BufRead \..* if &syntax == '' | set syntax=python | endif
 au BufNewFile,BufRead [.][a-zA-Z][a-zA-Z]* if &syntax == '' | set syntax=python | endif
 
-call pathogen#infect()
 
 "inoremap {      {}<Left>
 "inoremap {<CR>  {<CR>}<Esc>O
@@ -153,7 +155,8 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 "Powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-""let Powerline_symbols = 'fancy'
+let g:Powerline_colorscheme="solarized"
+let g:Powerline_symbols = 'fancy'
 
 "Ident_Guide
 let g:indent_guides_guide_size=1
