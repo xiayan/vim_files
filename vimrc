@@ -8,6 +8,7 @@ syntax enable
 
 set background=dark
 let g:solarized_bold = 0
+let g:solarized_italic = 1
 let g:solarized_hitrail = 1
 call togglebg#map("<F6>")
 colorscheme solarized
