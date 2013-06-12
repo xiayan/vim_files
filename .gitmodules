@@ -62,3 +62,9 @@
 [submodule "bundle/L9"]
 	path = bundle/L9
 	url = https://github.com/vim-scripts/L9.git
+[submodule "bundle/javacomplete"]
+	path = bundle/javacomplete
+	url = https://github.com/vim-scripts/javacomplete.git
+[submodule "bundle/python_fn"]
+	path = bundle/python_fn
+	url = https://github.com/Crapworks/python_fn.vim.git
