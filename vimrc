@@ -14,6 +14,9 @@ call togglebg#map("<F6>")
 colorscheme solarized
 set linespace=-1
 
+"ctag update time
+set updatetime=4000
+
 if has("gui_running")
     set columns=88
 endif
