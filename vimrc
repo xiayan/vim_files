@@ -79,7 +79,8 @@ nmap <leader>w :w!<cr>
 
 au BufNewFile,BufRead *.m set filetype=octave
 au BufNewFile,BufRead *.jack set filetype=jack
-au BufNewFile,BufRead *.py set filetype=python
+"au BufNewFile,BufRead *.py set filetype=python
+let g:python_highlight_all = 1
 au BufNewFile,BufRead *.cl set filetype=cool
 au BufNewFile,BufRead \..* if &syntax == '' | set syntax=python | endif
 au BufNewFile,BufRead [.][a-zA-Z][a-zA-Z]* if &syntax == '' | set syntax=python | endif
