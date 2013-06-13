@@ -6,7 +6,7 @@ call pathogen#infect()
 
 syntax enable
 
-set background=dark
+set background=dark 
 let g:solarized_bold = 0
 let g:solarized_italic = 1
 let g:solarized_hitrail = 1
@@ -73,9 +73,8 @@ set ofu=syntaxcomplete#Complete
 set autoread
 
 " Fast saving
-nmap <leader>w :w!<cr>
-
-
+nmap <Esc><Esc> :w!<cr>
+imap <Esc><Esc> <Esc>:w!<cr>i
 
 "inoremap {      {}<Left>
 "inoremap {<CR>  {<CR>}<Esc>O
@@ -147,13 +146,17 @@ let g:python_highlight_all = 1
 au BufNewFile,BufRead *.cl set filetype=cool
 au BufNewFile,BufRead \..* if &syntax == '' | set syntax=python | endif
 au BufNewFile,BufRead [.][a-zA-Z][a-zA-Z]* if &syntax == '' | set syntax=python | endif
-au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 
+set ofu=syntaxcomplete#Complete
 if has("autocmd")
     autocmd FileType python set omnifunc=pythoncomplete#Complete
     autocmd FileType java set omnifunc=javacomplete#Complete
 endif
 let g:SuperTabDefaultCompletionType = "context"
+
+set nocp
+au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
+
 map <C-C><C-T> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
@@ -205,5 +208,5 @@ endfunction
 
 nmap <leader>aa :A<CR>
 nmap <leader>as :AS<CR>
-nmap <leader>av :execute AVSplit()<CR>
-
+nmap <leader>av :AV<CR>
+"nmap <leader>av :execute AVSplit()<CR>
