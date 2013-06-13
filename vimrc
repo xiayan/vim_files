@@ -75,13 +75,6 @@ set autoread
 " Fast saving
 nmap <leader>w :w!<cr>
 
-au BufNewFile,BufRead *.m set filetype=octave
-au BufNewFile,BufRead *.jack set filetype=jack
-"au BufNewFile,BufRead *.py set filetype=python
-let g:python_highlight_all = 1
-au BufNewFile,BufRead *.cl set filetype=cool
-au BufNewFile,BufRead \..* if &syntax == '' | set syntax=python | endif
-au BufNewFile,BufRead [.][a-zA-Z][a-zA-Z]* if &syntax == '' | set syntax=python | endif
 
 
 "inoremap {      {}<Left>
@@ -133,9 +126,6 @@ inoremap <leader>dd <Esc>ddi
 inoremap <leader>uu <Esc>ui
 inoremap <leader>00 <Esc><C-v>i)s
 
-" Omni Completion
-imap <leader><Tab> <c-x><c-o>
-
 " Center screen on next/previous selection.
 "nnoremap n nzz
 "nnoremap N Nzz
@@ -150,12 +140,21 @@ nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+"FileType and OmniCompletion
+au BufNewFile,BufRead *.m set filetype=octave
+au BufNewFile,BufRead *.jack set filetype=jack
+let g:python_highlight_all = 1
+au BufNewFile,BufRead *.cl set filetype=cool
+au BufNewFile,BufRead \..* if &syntax == '' | set syntax=python | endif
+au BufNewFile,BufRead [.][a-zA-Z][a-zA-Z]* if &syntax == '' | set syntax=python | endif
+au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
+
 if has("autocmd")
     autocmd FileType python set omnifunc=pythoncomplete#Complete
     autocmd FileType java set omnifunc=javacomplete#Complete
-    au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 endif
 let g:SuperTabDefaultCompletionType = "context"
+map <C-C><C-T> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
