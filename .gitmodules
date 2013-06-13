@@ -68,3 +68,12 @@
 [submodule "bundle/python_fn"]
 	path = bundle/python_fn
 	url = https://github.com/Crapworks/python_fn.vim.git
+[submodule "bundle/cppcomplete"]
+	path = bundle/cppcomplete
+	url = https://github.com/vim-scripts/cppcomplete.git
+[submodule "bundle/pythoncomplete"]
+	path = bundle/pythoncomplete
+	url = https://github.com/vim-scripts/pythoncomplete.git
+[submodule "bundle/OmniCppComplete"]
+	path = bundle/OmniCppComplete
+	url = https://github.com/vim-scripts/OmniCppComplete.git

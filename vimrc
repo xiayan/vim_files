@@ -21,10 +21,8 @@ if has("gui_running")
     set columns=88
 endif
 
-"set guifont=Monaco:h12
 "set guifont=Lucida\ Sans\ Typewriter\ Regular\ for\ Powerline:h13
 set guifont=Source\ Code\ Pro\ for\ Powerline:h13
-"set guifont=Source\ Code\ Pro\ Light\ for\ Powerline:h13
 "set scrolloff=1000
 set clipboard=unnamed
 
@@ -155,8 +153,10 @@ set whichwrap+=<,>,h,l
 if has("autocmd")
     autocmd FileType python set omnifunc=pythoncomplete#Complete
     autocmd FileType java set omnifunc=javacomplete#Complete
-    autocmd BufNewFile,BufRead *.json set ft=json
+    au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 endif
+let g:SuperTabDefaultCompletionType = "context"
+
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 "Powerline
