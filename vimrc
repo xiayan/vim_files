@@ -163,7 +163,6 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 "Powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-let g:Powerline_colorscheme="solarized"
 let g:Powerline_symbols = 'fancy'
 
 "Ident_Guide
