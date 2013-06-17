@@ -83,3 +83,6 @@
 [submodule "bundle/vim-misc"]
 	path = bundle/vim-misc
 	url = https://github.com/xolox/vim-misc.git
+[submodule "bundle/Vim-R-plugin"]
+	path = bundle/Vim-R-plugin
+	url = https://github.com/vim-scripts/Vim-R-plugin.git
