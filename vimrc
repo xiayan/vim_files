@@ -6,7 +6,14 @@ call pathogen#infect()
 
 syntax enable
 
-set background=dark 
+"set background according to time of the day
+if strftime("%H") >= 7 && strftime("%H") <= 19
+    set background=light
+else
+    set background=dark
+endif
+
+"set background=dark 
 let g:solarized_bold = 0
 let g:solarized_italic = 1
 let g:solarized_hitrail = 1
