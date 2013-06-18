@@ -7,7 +7,7 @@ call pathogen#infect()
 syntax enable
 
 "set background according to time of the day
-if strftime("%H") >= 7 && strftime("%H") <= 19
+if strftime("%H") >= 7 && strftime("%H") < 19
     set background=light
 else
     set background=dark
