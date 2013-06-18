@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/yanxia/src/package/src'
 let g:netrw_dirhist_2='/Users/yanxia/PyRosetta/test'
 let g:netrw_dirhist_3='/Users/yanxia/Documents/Coding_Practice/Nand2Tetris/projects/07/VMTranslator'
+let g:netrw_dirhist_4='/Users/yanxia/Temp'

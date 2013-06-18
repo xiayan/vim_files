@@ -80,8 +80,8 @@ set ofu=syntaxcomplete#Complete
 set autoread
 
 " Fast saving
-nmap <Esc><Esc> :w!<cr>
-imap <Esc><Esc> <Esc>:w!<cr>i
+"nmap <Esc><Esc> :w!<cr>
+"imap <Esc><Esc> <Esc>:w!<cr>i
 
 "inoremap {      {}<Left>
 "inoremap {<CR>  {<CR>}<Esc>O
