@@ -201,8 +201,9 @@ map <leader>ta <Plug>TaskList
 
 let g:winManagerWindowLayout = "FileExplorer|TagList"
 let g:winManagerWidth = 30
-map <leader>wm :execute ToggleWM()<CR>
-let g:winManagerAutoOpen = 0 
+"map <leader>wm :execute ToggleWM()<CR>
+map <leader>wm :execute 'WMToggle'<CR>
+let g:winManagerAutoOpen = 0
 let g:winManagerOnRightSide = 1
 let g:persistentBehaviour = 0
 map <C-w>F :FirstExplorerWindow<CR>
