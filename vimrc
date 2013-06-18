@@ -2,7 +2,8 @@ set nocompatible
 set laststatus=2
 set encoding=utf-8
 
-call pathogen#infect()
+execute pathogen#infect()
+execute pathogen#helptags()
 
 syntax enable
 
@@ -23,6 +24,7 @@ set linespace=-1
 
 "ctag update time
 set updatetime=4000
+set tm=230
 
 if has("gui_running")
     set columns=88
@@ -194,6 +196,9 @@ function ToggleWM()
     :wincmd =
     :wincmd h
 endfunction
+
+"Remap TaskList binding to use Command-T
+map <leader>ta <Plug>TaskList
 
 let g:winManagerWindowLayout = "FileExplorer|TagList"
 let g:winManagerWidth = 30
