@@ -15,7 +15,7 @@ colorscheme solarized
 
 "set background according to time of the day
 if strftime("%H") >= 7 && strftime("%H") < 19
-    colorscheme github_console
+    colorscheme github
     "set background=light
 else
     set background=dark
