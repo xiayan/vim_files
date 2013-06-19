@@ -15,8 +15,8 @@ colorscheme solarized
 
 "set background according to time of the day
 if strftime("%H") >= 7 && strftime("%H") < 19
-    colorscheme github
-    "set background=light
+    "colorscheme github
+    set background=light
 else
     set background=dark
 endif
@@ -25,7 +25,7 @@ set linespace=-1
 
 "ctag update time
 set updatetime=4000
-set tm=230
+set tm=500
 
 if has("gui_running")
     set columns=88
