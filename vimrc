@@ -1,6 +1,7 @@
 set nocompatible
 set laststatus=2
 set encoding=utf-8
+set t_ti= t_te=
 
 "list chars
 set list
@@ -22,12 +23,14 @@ call togglebg#map("<F6>")
 colorscheme solarized
 
 "set background according to time of the day
-if strftime("%H") >= 7 && strftime("%H") < 19
-    "colorscheme github
-    set background=light
-else
-    set background=dark
-endif
+" if strftime("%H") >= 7 && strftime("%H") < 19
+"     "colorscheme github
+"     set background=light
+" else
+"     set background=dark
+" endif
+
+set background=dark
 
 set linespace=-1
 
@@ -65,7 +68,7 @@ set lbr
 set tw=500
 
 set autoindent "Auto indent
-set smartindent "Smart indent
+" set smartindent "Smart indent
 set wrap "Wrap lines
 
 set hlsearch
@@ -114,7 +117,7 @@ map <leader>nn :execute 'NERDTreeToggle ' . getcwd()<CR>
 map <leader>tl :execute 'TlistToggle '<CR><C-W><Left><BS>
 map <leader>f :execute 'FufFile'<CR>
 
-nnoremap g<Left> gT 
+nnoremap g<Left> gT
 nnoremap g<Right> gt
 
 "System clipboard " On OSX
@@ -129,10 +132,11 @@ map j gj
 map k gk
 
 " Smart way to move between windows
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-h> <C-w>h
-map <C-l> <C-w>l
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+nmap <silent> <c-E> :wincmd =<CR>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
