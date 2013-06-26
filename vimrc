@@ -1,6 +1,9 @@
 execute pathogen#infect()
 execute pathogen#helptags()
 
+set number
+set ruler
+
 "list chars
 set list
 set listchars=""                  " Reset the listchars
@@ -48,7 +51,7 @@ map <C-C><C-T> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 "Powerline
-set rtp+=~/.vim/powerline/powerline/bindings/vim
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:Powerline_symbols='fancy'
 
 "TaskList
@@ -74,8 +77,6 @@ let g:persistentBehaviour = 0
 "EasyTags
 let g:easytags_updatetime_min=3000
 
-"Disable Endwise
-call janus#disable_plugin('endwise')
 color solarized
 
 set nocompatible
@@ -168,5 +169,4 @@ nmap <leader>av :AV<CR>
 "delimitMate
 let delimitMate_expand_space=1
 let delimitMate_expand_cr=1
-imap <expr><CR> SuperTab('n') ? "\<C-n>" : "<Plug>delimitMateCR"
-
+" imap <expr><CR> SuperTab('n') ? "\<C-n>" : "<Plug>delimitMateCR"
