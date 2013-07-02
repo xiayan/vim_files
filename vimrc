@@ -1,3 +1,6 @@
+" Temporarily disable snipmate as it messes with the <Tab> key
+let g:pathogen_disabled = ['snipmate']
+
 execute pathogen#infect()
 execute pathogen#helptags()
 
