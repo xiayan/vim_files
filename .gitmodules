@@ -125,3 +125,9 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = git@github.com:msanders/snipmate.vim.git
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "bundle/repl"]
+	path = bundle/repl
+	url = https://github.com/khorser/vim-repl.git
