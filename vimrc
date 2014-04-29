@@ -57,6 +57,10 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:Powerline_symbols='fancy'
 
+"Airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
 "TaskList
 map <leader>ta <Plug>TaskList
 
@@ -70,17 +74,16 @@ map <leader>tl :execute 'TlistToggle '<CR><C-W><Left><BS>
 let g:indent_guides_guide_size=1
 
 "WinManager
-map <leader>wm :execute 'WMToggle'<CR>
-let g:winManagerWindowLayout = "FileExplorer|TagList"
-let g:winManagerWidth = 30
-let g:winManagerAutoOpen = 0
-let g:winManagerOnRightSide = 1
-let g:persistentBehaviour = 0
+" map <leader>wm :execute 'WMToggle'<CR>
+" let g:winManagerWindowLayout = "FileExplorer|TagList"
+" let g:winManagerWidth = 30
+" let g:winManagerAutoOpen = 0
+" let g:winManagerOnRightSide = 1
+" let g:persistentBehaviour = 0
 
 "EasyTags
 let g:easytags_updatetime_min=3000
 
-color solarized
 
 set nocompatible
 set laststatus=2
@@ -144,15 +147,23 @@ nmap <silent> <c-l> :wincmd l<CR>
 nmap <silent> <c-E> :wincmd =<CR>
 
 " Line traversal in Insertion Mode
-inoremap <leader>ii <Esc>I
-inoremap <leader>aa <Esc>A
-inoremap <leader>oO <Esc>O
-inoremap <leader>oo <Esc>o
-inoremap <leader>cc <Esc>C
-inoremap <leader>ss <Esc>S
-inoremap <leader>dd <Esc>ddi
-inoremap <leader>uu <Esc>ui
-inoremap <leader>00 <Esc><C-v>i)s
+" inoremap <leader>ii <Esc>I
+" inoremap <leader>aa <Esc>A
+" inoremap <leader>oO <Esc>O
+" inoremap <leader>oo <Esc>o
+" inoremap <leader>cc <Esc>C
+" inoremap <leader>ss <Esc>S
+" inoremap <leader>dd <Esc>ddi
+" inoremap <leader>uu <Esc>ui
+" inoremap <leader>00 <Esc><C-v>i)s
+nmap <Left> <<
+nmap <Right> >>
+vmap <Left> <gv
+vmap <Right> >gv
+nmap <Up> [e
+nmap <Down> ]e
+vmap <Up> [egv
+vmap <Down> ]egv
 
 if has("autocmd")
     autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -173,3 +184,5 @@ nmap <leader>av :AV<CR>
 let delimitMate_expand_space=1
 let delimitMate_expand_cr=1
 " imap <expr><CR> SuperTab('n') ? "\<C-n>" : "<Plug>delimitMateCR"
+
+color Tomorrow-Night-Eighties

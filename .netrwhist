@@ -1,10 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/yanxia/src/package/src'
-let g:netrw_dirhist_2='/Users/yanxia/PyRosetta/test'
-let g:netrw_dirhist_3='/Users/yanxia/Documents/Coding_Practice/Nand2Tetris/projects/07/VMTranslator'
-let g:netrw_dirhist_4='/Users/yanxia/Temp'
-let g:netrw_dirhist_5='/Users/yanxia/docs'
-let g:netrw_dirhist_6='/Users/yanxia/.vim'
-let g:netrw_dirhist_7='/Users/yanxia/.vim/bundle/vim-javascript'
-let g:netrw_dirhist_8='/usr/local/include'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home2/yanxia/rosetta_projects/CREB_PYP/Dark_vs_Light_Fixed_Lig/1NWZ_wt'
+let g:netrw_dirhist_2='/home2/yanxia/Msi1_Models'
