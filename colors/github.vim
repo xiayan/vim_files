@@ -1,142 +1,105 @@
-" Vim color file
-"
-" Author: Anthony Carapetis <anthony.carapetis@gmail.com>
-"
-" Note: Based on github's syntax highlighting theme
-"       Used Brian Mock's darkspectrum as a starting point/template
-"       Thanks to Ryan Heath for an easy list of some of the colours:
-"       http://rpheath.com/posts/356-github-theme-for-syntax-gem
+" ======================================================================
+" Github
+" ======================================================================
+" A Sublime Text 2 / Textmate theme.
+" Copyright (c) 2014 Dayle Rees.
+" Released under the MIT License <http://opensource.org/licenses/MIT>
+" ======================================================================
+" Find more themes at : https://github.com/daylerees/colour-schemes
+" ======================================================================
 
-hi clear 
+set background=dark
+hi clear
+syntax reset
 
-set background=light
-if version > 580
-    " no guarantees for version 5.8 and below, but this makes it stop
-    " complaining
-    hi clear 
-    if exists("syntax_on")
-	syntax reset
-    endif
-endif
-let g:colors_name="github"
+" Colors for the User Interface.
 
-hi Normal       guifg=#000000 guibg=#e3e3e9 ctermfg=16 ctermbg=254
+hi Cursor      guibg=#cc4455  guifg=white     ctermbg=4 ctermfg=15
+hi link CursorIM Cursor
+hi Normal      guibg=#ffffff  guifg=#555555    gui=none ctermbg=0 ctermfg=15
+hi NonText     guibg=bg  guifg=#555555   ctermbg=8 ctermfg=14
+hi Visual      guibg=#557799  guifg=white    gui=none ctermbg=9 ctermfg=15
 
-hi Repeat       guifg=#174b80 ctermfg=24
-hi Conditional  guifg=#174b80 ctermfg=24
+hi Linenr      guibg=bg       guifg=#aaaaaa  gui=none ctermbg=bg ctermfg=7
 
-" {{{ Cursor
-hi Cursor		guibg=#444454 guifg=#F8F8FF ctermbg=239 ctermfg=231
-hi CursorLine	guibg=#D8D8DD ctermbg=253 ctermfg=none cterm=none
-hi CursorColumn	guibg=#E8E8EE ctermbg=255
-" }}}
+hi Directory   guibg=bg       guifg=#337700  gui=none ctermbg=bg ctermfg=10
 
-" {{{ Diff
-hi DiffAdd         guifg=#003300 guibg=#DDFFDD gui=none ctermfg=233 ctermbg=194 cterm=none
-hi DiffChange                    guibg=#ececec gui=none ctermbg=255 cterm=none
-hi DiffText        guifg=#000033 guibg=#DDDDFF gui=none ctermfg=233 ctermbg=189 cterm=none
-hi DiffDelete      guifg=#DDCCCC guibg=#FFDDDD gui=none ctermfg=252 ctermbg=224 cterm=none
-" }}}
+hi IncSearch   guibg=#0066cc  guifg=white    gui=none ctermbg=1 ctermfg=15
+hi link Seach IncSearch
 
-" {{{ Folding / Line Numbering / Status Lines
-hi Folded		guibg=#ECECEC guifg=#808080 gui=none ctermbg=255 ctermfg=244 cterm=none
-hi vimFold		guibg=#ECECEC guifg=#808080 gui=none ctermbg=255 ctermfg=244 cterm=none
-hi FoldColumn	guibg=#ECECEC guifg=#808080 gui=none ctermbg=255 ctermfg=244 cterm=none
+hi SpecialKey  guibg=bg guifg=fg       gui=none ctermbg=bg ctermfg=fg
+hi Titled      guibg=bg guifg=fg       gui=none ctermbg=bg ctermfg=fg
 
-hi LineNr		guifg=#959595 guibg=#ECECEC gui=none ctermfg=246 ctermbg=255 cterm=none
-hi NonText		guifg=#808080 guibg=#ECECEC ctermfg=244 ctermbg=255
-hi Folded		guifg=#808080 guibg=#ECECEC gui=none ctermfg=244 ctermbg=255 cterm=none
-hi FoldeColumn  guifg=#808080 guibg=#ECECEC gui=none ctermfg=244 ctermbg=255 cterm=none
+hi ErrorMsg    guibg=bg guifg=#ff0000   ctermbg=bg ctermfg=12
+hi ModeMsg     guibg=bg guifg=#ffeecc  gui=none ctermbg=bg ctermfg=14
+hi link  MoreMsg     ModeMsg
+hi Question    guibg=bg guifg=#445588   ctermbg=bg ctermfg=10
+hi link  WarningMsg  ErrorMsg
 
-hi VertSplit	guibg=#bbbbbb guifg=#bbbbbb gui=none ctermbg=250 ctermfg=250 cterm=none
-hi StatusLine   guibg=#bbbbbb guifg=#404040 gui=none ctermbg=250 ctermfg=238 cterm=none
-hi StatusLineNC guibg=#d4d4d4 guifg=#404040 gui=italic ctermbg=188 ctermfg=238 cterm=italic
-" }}}
+hi StatusLine     guibg=#ffeecc  guifg=black     ctermbg=14 ctermfg=0
+hi StatusLineNC   guibg=#cc4455  guifg=white    gui=none ctermbg=4  ctermfg=11
+hi VertSplit      guibg=#cc4455  guifg=white    gui=none ctermbg=4  ctermfg=11
 
-" {{{ Misc
-hi ModeMsg		guifg=#990000 ctermfg=88
-hi MoreMsg		guifg=#990000 ctermfg=88
+hi DiffAdd     guibg=#446688  guifg=fg    gui=none ctermbg=1 ctermfg=fg
+hi DiffChange  guibg=#558855  guifg=fg    gui=none ctermbg=2 ctermfg=fg
+hi DiffDelete  guibg=#884444  guifg=fg    gui=none ctermbg=4 ctermfg=fg
+hi DiffText    guibg=#884444  guifg=fg     ctermbg=4 ctermfg=fg
 
-hi Title		guifg=#ef5939 ctermfg=203
-hi WarningMsg	guifg=#ef5939 ctermfg=203
-hi SpecialKey   guifg=#177F80 gui=italic ctermfg=30 cterm=italic
+" Colors for Syntax Highlighting.
 
-hi MatchParen	guibg=#cdcdfd guifg=#000000 ctermbg=189 ctermfg=16
-hi Underlined	guifg=#000000 gui=underline ctermfg=16 cterm=underline
-hi Directory	guifg=#990000 ctermfg=88
-" }}}
+hi Comment  guibg=bg  guifg=#b8b6b1  gui=none    ctermbg=8   ctermfg=7
 
-" {{{ Search, Visual, etc
-hi Visual		guifg=#FFFFFF guibg=#3465a4 gui=none ctermfg=231 ctermbg=61 cterm=none
-hi VisualNOS    guifg=#FFFFFF guibg=#204a87 gui=none ctermfg=231 ctermbg=24 cterm=none
-hi IncSearch	guibg=#cdcdfd guifg=#000000 gui=italic ctermbg=16 ctermfg=189 cterm=italic
-hi Search		guibg=#cdcdfd guifg=#000000 gui=italic ctermbg=16 ctermfg=189 cterm=italic
-" }}}
+hi Constant    guibg=bg    guifg=white        ctermbg=8   ctermfg=15
+hi String      guibg=bg    guifg=#DD1144    ctermbg=bg  ctermfg=14
+hi Character   guibg=bg    guifg=#008080      ctermbg=bg  ctermfg=14
+hi Number      guibg=bg    guifg=#DD1144      ctermbg=1   ctermfg=15
+hi Boolean     guibg=bg    guifg=#DD1144  gui=none    ctermbg=1   ctermfg=15
+hi Float       guibg=bg    guifg=#DD1144      ctermbg=1   ctermfg=15
 
-" {{{ Syntax groups
-hi Ignore		guifg=#808080 ctermfg=244
-hi Identifier	guifg=#0086B3 ctermfg=31
-hi PreProc		guifg=#A0A0A0 gui=none ctermfg=247 cterm=none
-hi Comment		guifg=#999988 gui=italic ctermfg=245 ctermbg=none
-hi Constant		guifg=#177F80 gui=none ctermfg=30 cterm=none
-hi String		guifg=#D81745 ctermfg=160
-hi Function		guifg=#990000 gui=none ctermfg=88 cterm=none
-hi Statement	guifg=#990000 gui=None ctermfg=88 cterm=None
-hi Type			guifg=#12568f gui=None ctermfg=24 cterm=None
-hi Number		guifg=#1C9898 ctermfg=30
-"hi Todo         guibg=#f8f8ff guifg=#ff1100 gui=underline
-hi Todo			guifg=#FFFFFF guibg=#990000 gui=italic ctermfg=231 ctermbg=88 cterm=none
-hi Special		guifg=#159828 gui=none ctermfg=28 cterm=none
-hi rubySymbol   guifg=#960B73 ctermfg=89
-hi Error        guibg=#f8f8ff guifg=#ff1100 gui=undercurl ctermbg=231 ctermfg=196 cterm=undercurl
-hi Label        guifg=#000000 gui=none ctermfg=16 cterm=none
-hi StorageClass guifg=#000000 gui=none ctermfg=16 cterm=none
-hi Structure    guifg=#990000 gui=none ctermfg=88 cterm=none
-hi TypeDef      guifg=#000000 gui=none ctermfg=16 cterm=none
-" }}}
+hi Identifier  guibg=bg    guifg=#555555      ctermbg=bg  ctermfg=12
+hi Function    guibg=bg    guifg=#008080      ctermbg=bg  ctermfg=12
+hi Statement   guibg=bg    guifg=#008080      ctermbg=bg  ctermfg=14
 
-" {{{ Completion menus
-hi WildMenu     guifg=#7fbdff guibg=#425c78 gui=none ctermfg=111 ctermbg=60 cterm=none
+hi Conditional guibg=bg    guifg=#555555      ctermbg=bg  ctermfg=12
+hi Repeat      guibg=bg    guifg=#555555      ctermbg=4   ctermfg=14
+hi Label       guibg=bg    guifg=#ffccff      ctermbg=bg   ctermfg=13
+hi Operator    guibg=bg    guifg=#555555      ctermbg=6   ctermfg=15
+hi Keyword     guibg=bg    guifg=#555555      ctermbg=bg  ctermfg=10
+hi Exception   guibg=bg    guifg=#008080      ctermbg=bg  ctermfg=10
 
-hi Pmenu        guibg=#808080 guifg=#ffffff gui=none ctermbg=244 ctermfg=231 cterm=none
-hi PmenuSel     guibg=#cdcdfd guifg=#000000 gui=italic ctermbg=60 ctermfg=111 cterm=italic
-hi PmenuSbar    guibg=#000000 guifg=#444444 ctermbg=16 ctermfg=238
-hi PmenuThumb   guibg=#aaaaaa guifg=#aaaaaa ctermbg=248 ctermfg=248
-" }}}
+hi PreProc    guibg=bg   guifg=#ffcc99   ctermbg=4  ctermfg=14
+hi Include    guibg=bg   guifg=#445588   ctermbg=bg ctermfg=10
+hi link Define    Include
+hi link Macro     Include
+hi link PreCondit Include
 
-" {{{ Spelling
-hi spellBad     guisp=#fcaf3e 
-hi spellCap     guisp=#73d216
-hi spellRare    guisp=#fcaf3e
-hi spellLocal   guisp=#729fcf
-" }}}
+hi Type       guibg=bg   guifg=#445588      ctermbg=bg  ctermfg=12
+hi StorageClass   guibg=bg   guifg=#008080      ctermbg=bg  ctermfg=10
+hi Structure      guibg=bg   guifg=#555555      ctermbg=bg  ctermfg=10
+hi Typedef    guibg=bg   guifg=#445588    ctermbg=bg  ctermfg=10
 
-" {{{ Aliases
-hi link cppSTL          Function
-hi link cppSTLType      Type
-hi link Character		Number
-hi link htmlTag			htmlEndTag
-"hi link htmlTagName     htmlTag
-hi link htmlLink		Underlined
-hi link pythonFunction	Identifier
-hi link Question		Type
-hi link CursorIM		Cursor
-hi link VisualNOS		Visual
-hi link xmlTag			Identifier
-hi link xmlTagName		Identifier
-hi link shDeref			Identifier
-hi link shVariable		Function
-hi link rubySharpBang	Special
-hi link perlSharpBang	Special
-hi link schemeFunc      Statement
-"hi link shSpecialVariables Constant
-"hi link bashSpecialVariables Constant
-" }}}
+hi Special    guibg=bg   guifg=#bbddff      ctermbg=1   ctermfg=15
+hi SpecialChar    guibg=bg   guifg=#bbddff      ctermbg=1   ctermfg=15
+hi Tag        guibg=bg   guifg=#bbddff      ctermbg=1   ctermfg=15
+hi Delimiter      guibg=bg   guifg=fg       ctermbg=1   ctermfg=fg
+hi SpecialComment guibg=#334455  guifg=#7f7e7a    ctermbg=1   ctermfg=15
+hi Debug      guibg=bg   guifg=#ff9999  gui=none    ctermbg=8   ctermfg=12
 
-" {{{ Tabs (non-gui0
-hi TabLine		guifg=#404040 guibg=#dddddd gui=none ctermfg=238 ctermbg=253 cterm=none
-hi TabLineFill	guifg=#404040 guibg=#dddddd gui=none ctermfg=238 ctermbg=253 cterm=none
-hi TabLineSel	guifg=#404040 gui=none ctermfg=238 cterm=none
-" }}}
-"
-" vim: sw=4 ts=4 foldmethod=marker
+hi Underlined guibg=bg guifg=#99ccff gui=underline ctermbg=bg ctermfg=9 cterm=underline
+
+hi Title    guibg=bg  guifg=#555555        ctermbg=1   ctermfg=15
+hi Ignore   guibg=bg       guifg=#cccccc    ctermbg=bg  ctermfg=8
+hi Error    guibg=#ff0000  guifg=white        ctermbg=12  ctermfg=15
+hi Todo     guibg=#556677  guifg=#ff0000      ctermbg=1   ctermfg=12
+
+hi htmlH2 guibg=bg guifg=fg  ctermbg=8 ctermfg=fg
+hi link htmlH3 htmlH2
+hi link htmlH4 htmlH3
+hi link htmlH5 htmlH4
+hi link htmlH6 htmlH5
+
+" And finally.
+
+let g:colors_name = "Github"
+let colors_name   = "Github"
+
