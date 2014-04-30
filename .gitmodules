@@ -143,3 +143,9 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/vimball"]
+	path = bundle/vimball
+	url = https://github.com/vim-scripts/Vimball.git
+[submodule "bundle/taghighlight"]
+	path = bundle/taghighlight
+	url = https://github.com/vim-scripts/TagHighlight.git
