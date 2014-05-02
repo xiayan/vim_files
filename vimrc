@@ -168,10 +168,10 @@ if has("autocmd")
 endif
 
 "have Vim jump to the last position when reopening a file
-if has("autocmd")
-    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-                \| exe "normal! g'\"" | endif
-endif
+" if has("autocmd")
+"     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+"                 \| exe "normal! g'\"" | endif
+" endif
 
 " configure tags - add additional tags here or comment out not-used ones
 set tags+=~/.vim/tags_database/cpp
