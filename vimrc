@@ -92,6 +92,11 @@ set encoding=utf-8
 syntax enable
 set background=dark
 set linespace=-1
+set showbreak=⇇
+
+noremap <silent> <C-S> :update<CR>
+vnoremap <silent> <C-S> <C-C>:update<CR>
+inoremap <silent> <C-S> <C-O>:update<CR>
 
 "ctag update time
 set updatetime=4000
