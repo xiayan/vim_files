@@ -38,9 +38,6 @@
 [submodule "bundle/c-support"]
 	path = bundle/c-support
 	url = https://github.com/blak3mill3r/c.vim.git
-[submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = https://github.com/vim-scripts/taglist.vim.git
 [submodule "bundle/winmanager"]
 	path = bundle/winmanager
 	url = https://github.com/vim-scripts/winmanager.git
@@ -155,3 +152,6 @@
 [submodule "bundle/colorsupport"]
 	path = bundle/colorsupport
 	url = https://github.com/vim-scripts/colorsupport.vim.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git

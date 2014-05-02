@@ -50,9 +50,6 @@ map <leader>tm :tabmove
 "Mapping for quick directory change
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
-"Shortcut for ctags
-map <C-C><C-T> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 "Powerline
@@ -69,8 +66,9 @@ map <leader>ta <Plug>TaskList
 "NerdTree
 map <leader>nn :execute 'NERDTreeToggle ' . getcwd()<CR>
 
-"TagList
-map <leader>tl :execute 'TlistToggle '<CR><C-W><Left><BS>
+"TagBar
+map <leader>rt :TagbarToggle<CR>
+let g:tagbar_left=1
 
 "Ident_Guide
 let g:indent_guides_guide_size=1
@@ -84,8 +82,7 @@ let g:indent_guides_guide_size=1
 " let g:persistentBehaviour = 0
 
 "EasyTags
-let g:easytags_updatetime_min=3000
-
+" let g:easytags_updatetime_min=3000
 
 set nocompatible
 set laststatus=2
@@ -96,6 +93,7 @@ set background=dark
 set linespace=-1
 set showbreak=⇇
 
+" Map Ctrl-S as save
 noremap <silent> <C-S> :update<CR>
 vnoremap <silent> <C-S> <C-C>:update<CR>
 inoremap <silent> <C-S> <C-O>:update<CR>
@@ -171,8 +169,8 @@ endif
 
 "have Vim jump to the last position when reopening a file
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal! g'\"" | endif
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+                \| exe "normal! g'\"" | endif
 endif
 
 " configure tags - add additional tags here or comment out not-used ones
@@ -200,10 +198,6 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 set completeopt=menuone,menu,longest
 let g:SuperTabDefaultCompletionType = "context"
 
-"CommandT
-nnoremap <silent> <Leader>t :CommandT<CR>
-nnoremap <silent> <Leader>b: CommandTBuffer<CR>
-
 "a.vim
 nmap <leader>aa :A<CR>
 nmap <leader>as :AS<CR>
@@ -215,7 +209,7 @@ let delimitMate_expand_cr=1
 " imap <expr><CR> SuperTab('n') ? "\<C-n>" : "<Plug>delimitMateCR"
 
 let g:syntastic_cpp_check_header = 1
-" let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_python_pylint_args = '--disable=C0326,R0914'
 
 color Tomorrow-Night
