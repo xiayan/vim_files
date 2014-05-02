@@ -166,6 +166,12 @@ if has("autocmd")
     autocmd FileType cpp set omnifunc=omni#cpp#complete#Main
 endif
 
+"have Vim jump to the last position when reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
+
 " configure tags - add additional tags here or comment out not-used ones
 set tags+=~/.vim/tags_database/cpp
 " set tags+=~/.vim/tags/qt4
@@ -188,7 +194,7 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 " Disable preview window
 set completeopt=menuone,menu,longest
-"let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "context"
 
 "CommandT
 nnoremap <silent> <Leader>t :CommandT<CR>
@@ -204,4 +210,9 @@ let delimitMate_expand_space=1
 let delimitMate_expand_cr=1
 " imap <expr><CR> SuperTab('n') ? "\<C-n>" : "<Plug>delimitMateCR"
 
-color Tomorrow-Night-Eighties
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_python_pylint_args = '--disable=C0326,R0914'
+
+color Tomorrow-Night
+
