@@ -177,6 +177,7 @@ endif
 
 " configure tags - add additional tags here or comment out not-used ones
 set tags+=~/.vim/tags_database/cpp
+set tags+=~/Rosetta/main/source/tags
 " set tags+=~/.vim/tags/qt4
 " build tags of your own project with Ctrl-C Ctrl-T
 map <C-C><C-T> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
@@ -214,7 +215,7 @@ let delimitMate_expand_cr=1
 " imap <expr><CR> SuperTab('n') ? "\<C-n>" : "<Plug>delimitMateCR"
 
 let g:syntastic_cpp_check_header = 1
-let g:syntastic_cpp_compiler = 'clang++'
+" let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_python_pylint_args = '--disable=C0326,R0914'
 
 color Tomorrow-Night
