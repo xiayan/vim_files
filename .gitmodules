@@ -149,3 +149,6 @@
 [submodule "bundle/taghighlight"]
 	path = bundle/taghighlight
 	url = https://github.com/vim-scripts/TagHighlight.git
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git

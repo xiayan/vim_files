@@ -151,16 +151,6 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 nmap <silent> <c-E> :wincmd =<CR>
 
-" Line traversal in Insertion Mode
-" inoremap <leader>ii <Esc>I
-" inoremap <leader>aa <Esc>A
-" inoremap <leader>oO <Esc>O
-" inoremap <leader>oo <Esc>o
-" inoremap <leader>cc <Esc>C
-" inoremap <leader>ss <Esc>S
-" inoremap <leader>dd <Esc>ddi
-" inoremap <leader>uu <Esc>ui
-" inoremap <leader>00 <Esc><C-v>i)s
 nmap <Left> <<
 nmap <Right> >>
 vmap <Left> <gv
@@ -171,10 +161,35 @@ vmap <Up> [egv
 vmap <Down> ]egv
 
 if has("autocmd")
-    autocmd FileType python set omnifunc=pythoncomplete#Complete
+    " autocmd FileType python set omnifunc=pythoncomplete#Complete
+    autocmd FileType python setlocal completeopt-=preview
     autocmd FileType java set omnifunc=javacomplete#Complete
+    autocmd FileType cpp set omnifunc=omni#cpp#complete#Main
 endif
-let g:SuperTabDefaultCompletionType = "context"
+
+" configure tags - add additional tags here or comment out not-used ones
+set tags+=~/.vim/tags_database/cpp
+" set tags+=~/.vim/tags/qt4
+" build tags of your own project with Ctrl-C Ctrl-T
+map <C-C><C-T> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+" OmniCppComplete
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+
+" automatically open and close the popup menu / preview window
+" au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+" set completeopt=menuone,menu,longest,preview
+
+" Disable preview window
+set completeopt=menuone,menu,longest
+"let g:SuperTabDefaultCompletionType = "context"
 
 "CommandT
 nnoremap <silent> <Leader>t :CommandT<CR>
