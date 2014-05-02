@@ -38,7 +38,6 @@ map k gk
 nnoremap g<Left> gT
 nnoremap g<Right> gt
 
-
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
