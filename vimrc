@@ -30,6 +30,9 @@ map <space> /
 map <leader><space> ?
 map <silent> <leader><cr> :noh<cr>
 
+" Toggle paste
+set pastetoggle=<F4>
+
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
