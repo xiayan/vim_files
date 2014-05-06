@@ -211,6 +211,5 @@ let delimitMate_expand_cr=1
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_python_pylint_args = '--disable=C0326,R0914'
-
 color Tomorrow-Night
 
