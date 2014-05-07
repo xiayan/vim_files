@@ -1,5 +1,5 @@
 " Disable snipmate as it messes with the <Tab> key
-let g:pathogen_disabled = ['snipmate', 'colorsupport']
+let g:pathogen_disabled = ['snipmate', 'colorsupport', 'winmanager', 'python_fn']
 
 execute pathogen#infect()
 execute pathogen#helptags()
