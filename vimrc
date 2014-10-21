@@ -1,11 +1,13 @@
 " Disable snipmate as it messes with the <Tab> key
-let g:pathogen_disabled = ['snipmate', 'colorsupport', 'winmanager', 'python_fn']
+let g:pathogen_disabled = ['snipmate', 'colorsupport', 'winmanager',
+            \'python_fn']
 
 execute pathogen#infect()
 execute pathogen#helptags()
 
 set number
 set ruler
+set colorcolumn=80
 
 "list chars
 set list
@@ -13,7 +15,8 @@ set listchars=""           " Reset the listchars
 set listchars=tab:\ \      " trailing whitespace as "."
 set listchars+=trail:.     " show trailing spaces as dots
 set listchars+=extends:>
-set listchars+=precedes:<  " The character to show in the last column when wrap is
+" The character to show in the last column when wrap is
+set listchars+=precedes:<
 
 " Set up file omnifunctions
 filetype on
@@ -178,7 +181,8 @@ set tags+=~/.vim/tags_database/cpp
 set tags+=~/Rosetta/main/source/tags
 " set tags+=~/.vim/tags/qt4
 " build tags of your own project with Ctrl-C Ctrl-T
-map <C-C><C-T> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <C-C><C-T> :
+        \!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
@@ -211,5 +215,5 @@ let delimitMate_expand_cr=1
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_python_pylint_args = '--disable=C0326,R0914,W0123'
-color Tomorrow-Night
+color solarized
 
