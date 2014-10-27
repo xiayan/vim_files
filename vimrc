@@ -176,6 +176,10 @@ endif
 "                 \| exe "normal! g'\"" | endif
 " endif
 
+" turn off auto select for jedi
+let g:jedi#popup_select_first=0
+let g:jedi#show_call_signatures=0
+
 " configure tags - add additional tags here or comment out not-used ones
 set tags+=~/.vim/tags_database/cpp
 set tags+=~/Rosetta/main/source/tags
