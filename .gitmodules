@@ -155,3 +155,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/promptline"]
+	path = bundle/promptline
+	url = https://github.com/edkolev/promptline.vim.git

@@ -35,6 +35,7 @@ map <silent> <leader><cr> :noh<cr>
 
 " Toggle paste
 set pastetoggle=<F4>
+call togglebg#map("<F5>")
 
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
@@ -92,7 +93,7 @@ set laststatus=2
 set encoding=utf-8
 
 syntax enable
-set background=dark
+set background=light
 set linespace=-1
 set showbreak=⇇
 
