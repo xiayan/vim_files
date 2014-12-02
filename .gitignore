@@ -13,3 +13,4 @@ build
 *.swp
 .*
 
+matlab_mlint.vim

@@ -158,3 +158,6 @@
 [submodule "bundle/promptline"]
 	path = bundle/promptline
 	url = https://github.com/edkolev/promptline.vim.git
+[submodule "bundle/matlab"]
+	path = bundle/matlab
+	url = https://github.com/sgeb/vim-matlab.git

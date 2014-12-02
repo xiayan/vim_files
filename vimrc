@@ -34,7 +34,7 @@ map <leader><space> ?
 map <silent> <leader><cr> :noh<cr>
 
 " Toggle paste
-set pastetoggle=<F4>
+set pastetoggle=<F6>
 call togglebg#map("<F5>")
 
 " Treat long lines as break lines (useful when moving around in them)
