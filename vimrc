@@ -94,6 +94,7 @@ set encoding=utf-8
 
 syntax enable
 set background=light
+" set background=dark
 set linespace=-1
 set showbreak=⇇
 
