@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home2/yanxia/rosetta_projects/CREB_PYP/Dark_vs_Light_Fixed_Lig/1NWZ_wt'
 let g:netrw_dirhist_2='/home2/yanxia/Msi1_Models'
+let g:netrw_dirhist_3='/home/yanxia/solarized'
+let g:netrw_dirhist_4='/home/yanxia/powerline_fonts'
