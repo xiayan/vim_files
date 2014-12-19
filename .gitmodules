@@ -161,3 +161,6 @@
 [submodule "bundle/matlab"]
 	path = bundle/matlab
 	url = https://github.com/sgeb/vim-matlab.git
+[submodule "bundle/tmuxline"]
+	path = bundle/tmuxline
+	url = https://github.com/edkolev/tmuxline.vim.git
