@@ -180,6 +180,7 @@ endif
 
 " turn off auto select for jedi
 let g:jedi#popup_select_first=0
+let g:jedi#popup_on_dot=0
 let g:jedi#show_call_signatures=0
 
 " configure tags - add additional tags here or comment out not-used ones
@@ -221,5 +222,6 @@ let delimitMate_expand_cr=1
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_python_pylint_args = '--disable=C0326,R0914,W0123'
-color solarized
+" color solarized
+color Tomorrow-Night-Eighties
 
