@@ -15,4 +15,4 @@ build
 
 matlab_mlint.vim
 
-bundle/*
+bundle
