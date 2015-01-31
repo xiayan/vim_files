@@ -164,3 +164,6 @@
 [submodule "bundle/tmuxline"]
 	path = bundle/tmuxline
 	url = https://github.com/edkolev/tmuxline.vim.git
+[submodule "vjde"]
+	path = vjde
+	url = https://github.com/vim-scripts/Vim-JDE.git

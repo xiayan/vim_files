@@ -205,9 +205,21 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 " au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 " set completeopt=menuone,menu,longest,preview
 
+" Supertab
 " Disable preview window
 set completeopt=menuone,menu,longest
+" Remap autocomplete menu control keys
+" inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+" inoremap <expr> j pumvisible() ? "\<C-n>" : "j"
+" inoremap <expr> k pumvisible() ? "\<C-p>" : "k"
+" inoremap <expr> h pumvisible() ? "\<PageUp>\<C-n>\<C-p>" : "h"
+" inoremap <expr> l pumvisible() ? "\<PageDown>\<C-n>\<C-p>" : "l"
+" let g:SuperTabCrMapping = 0 " prevent remap from breaking supertab
 let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabContextDefaultCompletionType = "<c-n>"
+" set wildmode=list:longest,full
+" let g:SuperTabClosePreviewOnPopupClose = 1 " close scratch window on autocompletion
+
 
 "a.vim
 nmap <leader>aa :A<CR>
@@ -218,6 +230,9 @@ nmap <leader>av :AV<CR>
 let delimitMate_expand_space=1
 let delimitMate_expand_cr=1
 " imap <expr><CR> SuperTab('n') ? "\<C-n>" : "<Plug>delimitMateCR"
+
+" turn off eclim syntax checking. use syntastic
+let g:EclimFileTypeValidate = 0
 
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler = 'clang++'
