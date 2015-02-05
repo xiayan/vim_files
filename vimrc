@@ -63,6 +63,7 @@ let g:Powerline_symbols='fancy'
 "Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+" let g:airline_theme='laederon'
 
 "TaskList
 map <leader>ta <Plug>TaskList
@@ -93,8 +94,8 @@ set laststatus=2
 set encoding=utf-8
 
 syntax enable
-" set background=light
-set background=dark
+set background=light
+" set background=dark
 set linespace=-1
 set showbreak=⇇
 
@@ -237,6 +238,7 @@ let g:EclimFileTypeValidate = 0
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_python_pylint_args = '--disable=C0326,R0914,W0123'
-" color solarized
-color Tomorrow-Night-Eighties
+color solarized
+" color Tomorrow-Night-Eighties
+" color dracula
 
