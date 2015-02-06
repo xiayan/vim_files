@@ -233,7 +233,7 @@ let delimitMate_expand_cr=1
 " imap <expr><CR> SuperTab('n') ? "\<C-n>" : "<Plug>delimitMateCR"
 
 " turn off eclim syntax checking. use syntastic
-let g:EclimFileTypeValidate = 0
+" let g:EclimFileTypeValidate = 0
 
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler = 'clang++'
