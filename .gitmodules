@@ -167,3 +167,9 @@
 [submodule "bundle/dracula-theme"]
 	path = bundle/dracula-theme
 	url = https://github.com/zenorocha/dracula-theme.git
+[submodule "bundle/startify"]
+	path = bundle/startify
+	url = https://github.com/mhinz/vim-startify.git
+[submodule "bundle/vim-R"]
+	path = bundle/vim-R
+	url = https://github.com/vim-scripts/Vim-R-plugin.git

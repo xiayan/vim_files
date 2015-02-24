@@ -63,7 +63,7 @@ let g:Powerline_symbols='fancy'
 "Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-" let g:airline_theme='laederon'
+let g:airline_theme='dracula'
 
 "TaskList
 map <leader>ta <Plug>TaskList
@@ -238,7 +238,33 @@ let delimitMate_expand_cr=1
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_python_pylint_args = '--disable=C0326,R0914,W0123'
-color solarized
+
+let g:startify_custom_header = [
+            \ '     |\__\         /\  \         /\__\',
+            \ '     |:|  |       /::\  \       /::|  |',
+            \ '     |:|  |      /:/\:\  \     /:|:|  |',
+            \ '     |:|__|__   /::\~\:\  \   /:/|:|  |_',
+            \ '     /::::\__\ /:/\:\ \:\__\ /:/ |:| /\__\',
+            \ '    /:/~~/~    \/__\:\/:/  / \/__|:|/:/  /',
+            \ '   /:/  /           \::/  /      |:/:/  /',
+            \ '   \/__/            /:/  /       |::/  /',
+            \ '                   /:/  /        /:/  /',
+            \ '                   \/__/         \/__/',
+            \ '      ___                       ___',
+            \ '     |\__\          ___        /\  \',
+            \ '     |:|  |        /\  \      /::\  \',
+            \ '     |:|  |        \:\  \    /:/\:\  \',
+            \ '     |:|__|__      /::\__\  /::\~\:\  \',
+            \ ' ____/::::\__\  __/:/\/__/ /:/\:\ \:\__\',
+            \ ' \::::/~~/~    /\/:/  /    \/__\:\/:/  /',
+            \ '  ~~|:|~~|     \::/__/          \::/  /',
+            \ '    |:|  |      \:\__\          /:/  /',
+            \ '    |:|  |       \/__/         /:/  /',
+            \ '     \|__|                     \/__/',
+            \]
+
+
+" color solarized
 " color Tomorrow-Night-Eighties
-" color dracula
+color dracula
 
