@@ -173,3 +173,6 @@
 [submodule "bundle/vim-R"]
 	path = bundle/vim-R
 	url = https://github.com/vim-scripts/Vim-R-plugin.git
+[submodule "bundle/restore_view"]
+	path = bundle/restore_view
+	url = https://github.com/vim-scripts/restore_view.vim.git

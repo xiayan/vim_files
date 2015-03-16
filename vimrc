@@ -26,7 +26,7 @@ set ofu=syntaxcomplete#Complete
 set autoread
 
 " Leave the vim content on screen after quiting vim
-set t_ti= t_te=
+" set t_ti= t_te=
 let &winheight = &lines * 7 / 10
 
 map <space> /
@@ -123,8 +123,9 @@ set shiftwidth=4
 set expandtab
 set softtabstop=4
 
-set foldmethod=syntax
-set foldlevel=99
+set foldmethod=manual
+" set foldlevel=99
+set viewoptions=cursor,folds,slash,unix
 
 " Linebreak on 500 characters
 set lbr
@@ -267,4 +268,5 @@ let g:startify_custom_header = [
 " color solarized
 " color Tomorrow-Night-Eighties
 color dracula
+highlight Normal ctermbg=NONE
 
