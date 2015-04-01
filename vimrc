@@ -170,7 +170,7 @@ vmap <Down> ]egv
 if has("autocmd")
     " autocmd FileType python set omnifunc=pythoncomplete#Complete
     autocmd FileType python setlocal completeopt-=preview
-    autocmd FileType java set omnifunc=javacomplete#Complete
+    " autocmd FileType java set omnifunc=javacomplete#Complete
     autocmd FileType cpp set omnifunc=omni#cpp#complete#Main
 endif
 
