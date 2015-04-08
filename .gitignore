@@ -17,3 +17,4 @@ build
 matlab_mlint.vim
 
 bundle
+colors/dracula.vim
