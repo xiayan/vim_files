@@ -164,9 +164,6 @@
 [submodule "bundle/tmuxline"]
 	path = bundle/tmuxline
 	url = https://github.com/edkolev/tmuxline.vim.git
-[submodule "bundle/dracula-theme"]
-	path = bundle/dracula-theme
-	url = https://github.com/zenorocha/dracula-theme.git
 [submodule "bundle/startify"]
 	path = bundle/startify
 	url = https://github.com/mhinz/vim-startify.git
