@@ -266,7 +266,8 @@ let g:startify_custom_header = [
 
 
 " color solarized
-" color Tomorrow-Night-Eighties
-color dracula
+" color Monokai-Refined
+" color dracula
+colorscheme afterglow
 highlight Normal ctermbg=NONE
 
