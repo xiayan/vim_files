@@ -7,7 +7,7 @@ execute pathogen#helptags()
 
 set number
 set ruler
-set colorcolumn=80
+set colorcolumn=100
 
 "list chars
 set list
@@ -57,7 +57,7 @@ nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 "Powerline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 let g:Powerline_symbols='fancy'
 
 "Airline
@@ -118,9 +118,8 @@ map <silent> <leader>cl :set cursorline!<CR>
 map <silent> <leader>cc :set cursorcolumn!<CR>
 set gcr=n:blinkon0
 
-set tabstop=4
-set shiftwidth=4
 set expandtab
+set shiftwidth=4
 set softtabstop=4
 
 set foldmethod=manual
